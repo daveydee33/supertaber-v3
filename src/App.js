@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import SuperTaber from './SuperTaber.jsx';
+import TaberHeader from './TaberHeader.jsx';
+import TabHeaderItem from './TabHeaderItem.jsx';
+// import {SuperTaber, TaberHeader, TabHeaderItem, TaberContent, TaberContentItem} from '../app';
 import './App.css';
 
-class App extends Component {
+const header = 'This is SuperTaber';
+const content = 'Some content...';
+
+export default class App extends Component {
+
+  onClick() {
+    console.log('clicked');
+  }
+
   render() {
     return (
       <div className="App">
+        <SuperTaber
+          header={header}
+          content={content}
+        >
+        </SuperTaber>
 
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <TaberHeader>
+          <TabHeaderItem text="Button1" />
+        </TaberHeader>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
 
       </div>
     );
   }
 }
 
-export default App;
