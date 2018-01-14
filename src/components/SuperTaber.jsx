@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 
-export default class SuperTaber extends Component {
+export class SuperTaber extends Component {
   render() {
     return (
       <div>
@@ -10,3 +10,4 @@ export default class SuperTaber extends Component {
     )
   }
 }
+
